@@ -1,0 +1,127 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 80vh;
+}
+.home-heading-container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  align-items: center;
+}
+.home-heading {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.home-description {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.home-container h1 {
+  margin-bottom: 0;
+}
+
+.blue {
+  font-weight: bold;
+  color: #2026d2;
+  font-size: 1.5rem;
+  position: relative;
+  width: 70%;
+}
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
+footer p span {
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+footer.footer-logo {
+  height: 1.1rem;
+  vertical-align: top;
+  margin-left: 0.2rem;
+}
+
+img {
+  height: 1em;
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: black;
+  border: none;
+  font-size: 1.9em;
+  transform: none;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  height: 100%;
+  width: calc(100% + 20px);
+  position: absolute;
+  top: -2px;
+  left: -10px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  transition: 1s;
+}
+
+.button:before {
+  content: "";
+  height: calc(100% + 20px);
+  width: 100%;
+  position: absolute;
+  top: -10px;
+  left: -2px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  transition: 1s;
+}
+
+.home-heading-container > a:nth-child(3) {
+  padding-top: 7%;
+}
+
+.button:hover:before {
+  transform: rotateY(180deg);
+}
+
+.button:hover:after {
+  transform: rotateX(180deg);
+}
+
+@media (max-width: 450px) {
+  .home-container {
+    height: 92vh;
+  }
+  .home {
+    background: none;
+    background-color: #f5f5ff;
+  }
+  .home-heading {
+    font-size: 2rem;
+  }
+  .blue {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .home-heading-container > a:nth-child(3) {
+    padding-top: 12%;
+  }
+}
