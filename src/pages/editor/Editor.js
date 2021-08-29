@@ -1,40 +1,36 @@
 import React, { useContext, useState } from "react";
-import { UnControlled as CodeMirror } from "react-codemirror2";
+import { Controlled as CodeMirror } from "react-codemirror2";
 import "codemirror/lib/codemirror.css";
-import { GlobalContext } from "../../Context";
-
+import "codemirror/theme/dracula.css";
+import "codemirror/mode/sql/sql";
+import "codemirror/addon/edit/matchbrackets";
+import "codemirror/addon/hint/sql-hint.js";
+// import { GlobalContext } from "../../Context";
 
 const Editor = () => {
-  const { editorTheme, query, setQuery } = useContext(GlobalContext);
-
+  // const { theme, setTheme, query, setQuery } = useContext(GlobalContext);
+  const [theme, setTheme] = useState("default");
+  const [query, setQuery] = useState("SELECT * FROM Products");
 
   return (
     <div>
-      {/* <CodeMirror
-        value='<h1>I ♥ react-codemirror2</h1>'
-        options={{
-          mode: "xml",
-          theme: "default",
-          lineNumbers: true,
-        }}
-        onChange={(editor, data, value) => {}}
-      /> */}
       <CodeMirror
         value={query}
-        options={
-          {
-            mode: "xml",
-            // theme: "default",
-            theme: editorTheme,
-            lineNumbers: true,
-          }
-        }
+        options={{
+          mode: "sql",
+          theme: theme,
+          lineNumbers: true,
+          lint: true,
+          matchBrackets: true,
+          addModeClass: true,
+          showHint: true,
+        }}
+        name='Editor'
+        aria-label='code-editor'
         onBeforeChange={(editor, data, value) => {
           setQuery(value);
         }}
-        onChange={(editor, data, value) => {
-          console.log('controlled', value);
-        }}
+        onChange={(editor, data, value) => {}}
       />
     </div>
   );
