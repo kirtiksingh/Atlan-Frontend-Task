@@ -6,12 +6,12 @@ const Home = lazy(() => import("./pages/home/Home"));
 const Editor = lazy(() => import("./pages/editor/Editor"));
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
 const Github = lazy(() => import("./components/github/Github"));
-
+const WifiLoader = lazy(() => import("./components/wifi-loader/WifiLoader"));
 
 function App() {
   return (
     <div className='App'>
-      <Suspense fallback={<div>Loading ... </div>}>
+      <Suspense fallback={WifiLoader}>
         <Router>
           <Navbar />
           <Route path='/' exact component={Home} />

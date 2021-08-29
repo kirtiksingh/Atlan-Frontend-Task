@@ -57,6 +57,7 @@ footer.footer-logo {
 
 img {
   height: 1em;
+  max-width: 3.5em;
 }
 
 .button {
