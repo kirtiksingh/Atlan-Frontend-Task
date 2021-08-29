@@ -2,10 +2,15 @@ import { useContext, useState } from "react";
 import MainContext from "../../MainContext";
 import ColumnDetails from "./ColumnDetails";
 import Table from "./Table";
+import { CSVLink } from "react-csv";
 
 const Output = () => {
   const [tab, setTab] = useState(0);
   const { queryHistory } = useContext(MainContext);
+
+  const exportData = () => {
+    console.log("Data to be exported");
+  };
 
   return (
     <div className='query-results'>
@@ -40,9 +45,14 @@ const Output = () => {
               </span>
             </p>
             <div className='export-btn'>
-              <button>
-                Export <span className='fa fa-download'></span>
-              </button>
+              <CSVLink
+                data={queryHistory.outputData}
+                filename={"dataOutput.csv"}
+              >
+                <button onClick={exportData}>
+                  Export <span className='fa fa-download'></span>
+                </button>
+              </CSVLink>
             </div>
           </div>
           {tab === 0 ? (

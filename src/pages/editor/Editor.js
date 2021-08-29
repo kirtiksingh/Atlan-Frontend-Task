@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import "./Editor.css";
 import SideBar from "../../components/editor-components/SideBar";
 import CodeMirror from "../../components/editor-components/CodeMirror";
@@ -14,11 +14,6 @@ function Editor() {
     history: ["SELECT * FROM internetData;"],
     outputData: [],
   });
-
-  // useEffect(() => {
-  //   console.log(queryHistory);
-  //   console.log(query);
-  // });
 
   const contextValue = useMemo(
     () => ({ query, setQuery, queryHistory, setQueryHistory }),

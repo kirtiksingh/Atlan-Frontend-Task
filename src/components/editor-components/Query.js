@@ -25,7 +25,7 @@ const Query = (props) => {
       queryHistory[props.type].filter((i) =>
         i.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    );
+    ); // eslint-disable-next-line
   }, [searchQuery]);
 
   return (
