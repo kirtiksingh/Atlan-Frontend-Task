@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <div className='home-container'>
         <div className='home-heading-container'>
-          <h1 className='home-heading'>SQLiter - Query Master{<br />}</h1>
+          <h1 className='home-heading'>SQLiter - Mastering Queries{<br />}</h1>
           <h2 className='blue'>
             Crunch Your SQL Queries Faster Than You Have Before. Writing Queries
             Has Never Felt Better.

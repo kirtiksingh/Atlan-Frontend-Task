@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
@@ -8,11 +8,17 @@ const Github = lazy(() => import("./components/github/Github"));
 const Editor = lazy(() => import("./pages/editor/Editor"));
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+  };
+
   return (
-    <div className='App'>
+    <div className='App' id={`${darkMode ? `dark` : `light`}-mode`}>
       <Suspense fallback={<div>Loading ... </div>}>
         <Router>
-          <Navbar />
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <Route path='/' exact component={Home} />
           <Route path='/editor' exact component={Editor} />
           <Route path='/github' exact component={Github} />

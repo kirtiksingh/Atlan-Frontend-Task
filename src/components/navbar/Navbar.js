@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import Header from "../editor-components/Header";
+// import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-const Navbar = () => {
+const Navbar = ({darkMode, toggleDarkMode}) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -77,6 +78,12 @@ const Navbar = () => {
                 </a>
               );
             })}
+            {/* <DarkModeSwitch
+              style={{ marginBottom: "2rem" }}
+              checked={darkMode}
+              onChange={toggleDarkMode}
+              size={20}
+            /> */}
           </ul>
         </div>
       </nav>

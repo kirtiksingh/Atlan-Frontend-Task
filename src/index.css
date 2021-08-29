@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-:root {
+/* :root {
   --primary: #f05;
   --accent: #525fe1;
   --light: #e7ecef;
@@ -22,7 +22,47 @@ code {
   --grad: linear-gradient(270deg, #525ee0 35%, #18b0ec 100%);
   --accent2: hsl(197, 85%, 51%);
   --atlan: #2026d2;
+  --text: #3e4c59;
+  --white: #fff;
+  --table-border: #dddddd;
+} */
+
+#light-mode {
+  --primary: #110f19;
+  --primary1: #151122;
+  --primary-active: #1a182d;
+  --b-w: white;
+  --accent: #4d38a2;
+  --sub-acc-1: #eee6ff;
+  --sub-acc-2: #6f678b;
+  --sender-bg: #19182a;
+  --sender-text: #ada9b9;
+  --user-text: white;
+  --time-text: #b0acae;
+  --chat-border: #2b2039;
+  --primary-translucent: #110f19b7;
+  --shadow-color: rgba(77, 56, 162, 0.5);
+  --tbd-chat-mail: #241937;
 }
+
+#dark-mode {
+  --primary: #110f19;
+  --primary1: #151122;
+  --primary-active: #1a182d;
+  --b-w: white;
+  --accent: #4d38a2;
+  --sub-acc-1: #eee6ff;
+  --sub-acc-2: #6f678b;
+  --sender-bg: #19182a;
+  --sender-text: #ada9b9;
+  --user-text: white;
+  --time-text: #b0acae;
+  --chat-border: #2b2039;
+  --primary-translucent: #110f19b7;
+  --shadow-color: rgba(77, 56, 162, 0.5);
+  --tbd-chat-mail: #241937;
+}
+
 body::-webkit-scrollbar {
   width: 0.5rem;
   cursor: pointer;

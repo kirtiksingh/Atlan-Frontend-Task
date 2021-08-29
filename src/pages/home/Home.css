@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  height: 80vh;
+  height: 75vh;
   text-align: center;
 }
 .home-heading-container {
@@ -38,6 +38,7 @@
 
 footer {
   width: 100%;
+  margin-top: 10vh;
 }
 
 footer p {
@@ -125,5 +126,8 @@ img {
   }
   .home-heading-container > a:nth-child(3) {
     padding-top: 12%;
+  }
+  .footer {
+    margin-top: -3vh;
   }
 }
