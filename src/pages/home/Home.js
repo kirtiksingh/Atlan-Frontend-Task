@@ -13,7 +13,7 @@ const Home = () => {
             Has Never Felt Better.
           </h2>
           <Link to='/editor'>
-            <button class='button'>Get Started</button>
+            <button className='button'>Get Started</button>
           </Link>
         </div>
       </div>

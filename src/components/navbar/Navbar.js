@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import Header from "../editor-components/Header";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,6 +46,9 @@ const Navbar = () => {
 
   return (
     <>
+      <div className='mini-header'>
+        <Header />
+      </div>
       <div
         className={`nav-menu-icon ${menuOpen ? "active" : "not-active"}`}
         id='nav-menu-icon'
@@ -63,7 +67,7 @@ const Navbar = () => {
             {links.map((link, index) => {
               return (
                 <a
-                  className='nav-link'
+                  className='nav-link-original'
                   href={link.link}
                   key={index}
                   onClick={() => setMenuOpen(false)}

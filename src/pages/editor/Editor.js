@@ -1,39 +1,47 @@
-import React, { useContext, useState } from "react";
-import { Controlled as CodeMirror } from "react-codemirror2";
-import "codemirror/lib/codemirror.css";
-import "codemirror/theme/dracula.css";
-import "codemirror/mode/sql/sql";
-import "codemirror/addon/edit/matchbrackets";
-import "codemirror/addon/hint/sql-hint.js";
-// import { GlobalContext } from "../../Context";
+import { useEffect, useMemo, useState } from "react";
+import "./Editor.css";
+import SideBar from "../../components/editor-components/SideBar";
+import CodeMirror from "../../components/editor-components/CodeMirror";
+import Output from "../../components/editor-components/Output";
+import MainContext from "../../MainContext";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 
-const Editor = () => {
-  // const { theme, setTheme, query, setQuery } = useContext(GlobalContext);
-  const [theme, setTheme] = useState("default");
-  const [query, setQuery] = useState("SELECT * FROM Products");
+function Editor() {
+  const [query, setQuery] = useState("SELECT * FROM internetData;");
+  const [queryHistory, setQueryHistory] = useState({
+    saved: ["SELECT * FROM internetData;"],
+    history: ["SELECT * FROM internetData;"],
+    outputData: [],
+  });
+
+  // useEffect(() => {
+  //   console.log(queryHistory);
+  //   console.log(query);
+  // });
+
+  const contextValue = useMemo(
+    () => ({ query, setQuery, queryHistory, setQueryHistory }),
+    [query, queryHistory]
+  );
 
   return (
-    <div>
-      <CodeMirror
-        value={query}
-        options={{
-          mode: "sql",
-          theme: theme,
-          lineNumbers: true,
-          lint: true,
-          matchBrackets: true,
-          addModeClass: true,
-          showHint: true,
-        }}
-        name='Editor'
-        aria-label='code-editor'
-        onBeforeChange={(editor, data, value) => {
-          setQuery(value);
-        }}
-        onChange={(editor, data, value) => {}}
-      />
+    <div className='App'>
+      <MainContext.Provider value={contextValue}>
+        <div className='content'>
+          <div className='row'>
+            <div className='col-md-3'>
+              <SideBar />
+            </div>
+            <div className='col-md-9 col-12 editor-area'>
+              <CodeMirror />
+              <Output />
+            </div>
+          </div>
+        </div>
+      </MainContext.Provider>
     </div>
   );
-};
+}
 
 export default Editor;

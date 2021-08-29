@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
 const Home = lazy(() => import("./pages/home/Home"));
-const Editor = lazy(() => import("./pages/editor/Editor"));
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
 const Github = lazy(() => import("./components/github/Github"));
-
+const Editor = lazy(() => import("./pages/editor/Editor"));
 
 function App() {
   return (

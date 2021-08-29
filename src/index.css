@@ -21,6 +21,7 @@ code {
   --dark-translucent: #030119b1;
   --grad: linear-gradient(270deg, #525ee0 35%, #18b0ec 100%);
   --accent2: hsl(197, 85%, 51%);
+  --atlan: #2026d2;
 }
 body::-webkit-scrollbar {
   width: 0.5rem;
