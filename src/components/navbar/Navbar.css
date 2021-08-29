@@ -5,7 +5,7 @@ nav {
   top: 0;
   z-index: 1000;
   height: 4rem;
-  transition: all 0.6s;
+  /* transition: all 0.6s; */
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -22,7 +22,7 @@ nav {
   background-color: transparent;
   /* background-color: #2026d2; */
   /* background: var(--grad); */
-  transition: all 0.4s;
+  /* transition: all 0.4s; */
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
 }
@@ -36,7 +36,7 @@ nav.scrolled .nav-main {
 
 nav.scrolled .nav-links {
   width: 98%;
-  background: var(--grad);
+  /* background: var(--grad); */
 }
 
 .nav-links {
@@ -80,7 +80,8 @@ nav.scrolled .nav-links {
 }
 
 .scrolled .nav-link-original {
-  color: white;
+  /* color: white; */
+  color: var(--atlan);
 }
 
 .nav-link-original {
@@ -89,7 +90,7 @@ nav.scrolled .nav-links {
   font-size: 1.2rem;
   /* font-family: Shifter Sans; */
   /* letter-spacing: 0.1em; */
-  transition: all 0.4s;
+  /* transition: all 0.4s; */
   position: relative;
   font-family: "Raleway", sans-serif;
   text-decoration: none;
@@ -177,7 +178,7 @@ nav.scrolled .nav-links {
 .img-cart {
   height: 4.5vh;
   width: 4.5vh;
-  transition: 0.3s ease-in;
+  /* transition: 0.3s ease-in; */
 }
 
 .img-cart:hover {
