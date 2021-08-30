@@ -3,7 +3,7 @@ import "./Navbar.css";
 import Header from "../editor-components/Header";
 // import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-const Navbar = ({darkMode, toggleDarkMode}) => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -67,13 +67,15 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
           <ul className={`nav-links`}>
             {links.map((link, index) => {
               return (
-                <li
-                  className='nav-link-original'
-                  href={link.link}
-                  key={index}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.title}
+                <li>
+                  <a
+                    className='nav-link-original'
+                    href={link.link}
+                    key={index}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.title}
+                  </a>
                   <div className='underline'></div>
                 </li>
               );
