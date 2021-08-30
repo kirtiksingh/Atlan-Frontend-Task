@@ -69,7 +69,8 @@ footer.footer-logo {
 
 .footer img {
   height: 1em;
-  max-width: 3.5em;
+  /* max-width: 3.5em; */
+  width: 3.5em;
 }
 
 .button {
