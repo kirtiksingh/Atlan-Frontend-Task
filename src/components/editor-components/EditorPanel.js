@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import MainContext from "../../MainContext";
 import { queryDataAlt as queryData } from "../../assets/data/data";
-import { queryData2 as queryData2 } from "../../assets/data/data";
+import { queryData2 } from "../../assets/data/data";
 
 
 const EditorPanel = () => {
