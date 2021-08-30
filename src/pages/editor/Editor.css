@@ -41,6 +41,10 @@ body {
   background-color: whitesmoke;
   padding: 1rem;
   border-right: 1px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 .sidebar-item {
   height: 35vh;

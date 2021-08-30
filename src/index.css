@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -63,7 +64,7 @@ code {
   --tbd-chat-mail: #241937;
 } */
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 0.5rem;
   cursor: pointer;
 }
@@ -77,7 +78,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   cursor: pointer;
   height: 10rem;
-}
+} */
 
 Link {
   text-decoration: none;
