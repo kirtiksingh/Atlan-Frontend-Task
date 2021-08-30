@@ -67,7 +67,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <ul className={`nav-links`}>
             {links.map((link, index) => {
               return (
-                <li>
+                <li className='nav-link-original'>
                   <a
                     className='nav-link-original'
                     href={link.link}
