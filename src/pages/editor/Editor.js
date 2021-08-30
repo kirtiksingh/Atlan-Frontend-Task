@@ -10,7 +10,7 @@ import "font-awesome/css/font-awesome.min.css";
 function Editor() {
   const [query, setQuery] = useState("SELECT * FROM internetData;");
   const [queryHistory, setQueryHistory] = useState({
-    saved: ["SELECT * FROM internetData;"],
+    saved: ["SELECT * FROM internetData;", "SELECT id, first_name, last_name FROM internetData;"],
     history: ["SELECT * FROM internetData;"],
     outputData: [],
   });

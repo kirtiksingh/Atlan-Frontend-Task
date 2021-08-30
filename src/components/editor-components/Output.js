@@ -21,27 +21,27 @@ const Output = () => {
               className={`tabs ${tab === 0 ? "active" : ""} cursor-pointer`}
               onClick={() => setTab(0)}
             >
-              Table
+              Output
             </span>
             <span
               className={`tabs ${tab === 1 ? "active" : ""} cursor-pointer`}
               onClick={() => setTab(1)}
             >
-              Columns
+              Table Data
             </span>
           </div>
           <div className='query-details'>
             <p className='text-2'>
-              Showing{" "}
+              {/* Showing{" "} */}
               <span>
                 {tab === 0
                   ? queryHistory.outputData.length
                   : Object.keys(queryHistory.outputData[0]).length}
               </span>{" "}
-              results
-              <span style={{ fontSize: "0.8rem" }} className='text-1'>
+              rows in Set
+              <span style={{ fontSize: "0.9rem" }} className='text-1'>
                 {" "}
-                (0.03s)
+                (0.03sec)
               </span>
             </p>
             <div className='export-btn'>

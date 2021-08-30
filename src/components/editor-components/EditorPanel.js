@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import MainContext from "../../MainContext";
 import { queryDataAlt as queryData } from "../../assets/data/data";
+import { queryData2 as queryData2 } from "../../assets/data/data";
+
 
 const EditorPanel = () => {
   const { query, setQueryHistory, setQuery } = useContext(MainContext);
@@ -16,6 +18,12 @@ const EditorPanel = () => {
       setQueryHistory((prev) => ({
         ...prev,
         outputData: queryData,
+      }));
+    } 
+    else if (query === "SELECT id, first_name, last_name FROM internetData;") {
+      setQueryHistory((prev) => ({
+        ...prev,
+        outputData: queryData2,
       }));
     } 
     else {
