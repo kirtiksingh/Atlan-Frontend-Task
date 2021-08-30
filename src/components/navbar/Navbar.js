@@ -67,7 +67,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
           <ul className={`nav-links`}>
             {links.map((link, index) => {
               return (
-                <a
+                <li
                   className='nav-link-original'
                   href={link.link}
                   key={index}
@@ -75,7 +75,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                 >
                   {link.title}
                   <div className='underline'></div>
-                </a>
+                </li>
               );
             })}
             {/* <DarkModeSwitch

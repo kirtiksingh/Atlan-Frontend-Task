@@ -182,7 +182,7 @@ th {
 .cursor-pointer {
   cursor: pointer;
 }
-.query-results .placeholder-text{
+.query-results .placeholder-text {
   font-size: 2rem;
 }
 .placeholder-text {
@@ -213,7 +213,10 @@ code {
 }
 
 @media (max-width: 768px) {
-  .editor-panel{
+  .editor {
+    font-size: 0.9em;
+  }
+  .editor-panel {
     flex-direction: row;
     justify-content: space-evenly;
   }
