@@ -345,10 +345,19 @@ nav.scrolled .nav-links {
 /* Mini Header  */
 .mini-header {
   display: none;
+  height: 10%;
 }
 
 @media (max-width: 800px) {
   .mini-header {
     display: block;
   }
+}
+
+.header {
+  border-bottom: 1px solid whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
 }

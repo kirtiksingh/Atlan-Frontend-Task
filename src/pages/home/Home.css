@@ -57,7 +57,7 @@ footer.footer-logo {
   margin-left: 0.2rem;
 }
 
-img {
+.footer img {
   height: 1em;
   max-width: 3.5em;
 }
@@ -111,7 +111,7 @@ img {
 
 @media (max-width: 450px) {
   .home-container {
-    height: 92vh;
+    height: 85%;
   }
   .home {
     background: none;

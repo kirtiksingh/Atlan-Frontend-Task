@@ -17,12 +17,6 @@ body {
 .logo {
   padding: 0.5rem 2rem;
 }
-.header {
-  border-bottom: 1px solid whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .editor-area {
   height: 90vh;
   overflow: auto;
@@ -31,12 +25,10 @@ body {
 /* Sidebar */
 
 .sidebar {
-  /* width: 300px; */
   border-radius: 6px;
   margin: 1rem 1rem 1rem 1rem;
-  min-height: 85vh;
-  min-height: 85vh;
-  /* height: 100%; */
+  /* min-height: 85vh; */
+  height: 85vh;
   overflow: auto;
   background-color: whitesmoke;
   padding: 1rem;
@@ -47,7 +39,7 @@ body {
   overflow: hidden;
 }
 .sidebar-item {
-  height: 35vh;
+  height: 40vh;
 }
 .sidebar .placeholder-text {
   font-size: 1.5rem;
@@ -55,7 +47,7 @@ body {
 }
 
 div.sidebar-item:nth-child(2) {
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .primary {

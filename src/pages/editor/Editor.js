@@ -21,7 +21,7 @@ function Editor() {
   );
 
   return (
-    <div className='App'>
+    <div className='App-Editor'>
       <MainContext.Provider value={contextValue}>
         <div className='content'>
           <div className='row'>
