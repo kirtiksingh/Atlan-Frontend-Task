@@ -1,9 +1,19 @@
+.home-background {
+  height: 90vh;
+  background-image: url("../../assets/home-header-modern.svg");
+  background-position-x: center;
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-origin: padding-box;
+  background-clip: border-box;
+}
 .home-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   height: 75vh;
   text-align: center;
 }
@@ -110,6 +120,9 @@ footer.footer-logo {
 }
 
 @media (max-width: 450px) {
+  .home-background {
+    background-image: none;
+  }
   .home-container {
     height: 85%;
   }
@@ -128,6 +141,6 @@ footer.footer-logo {
     padding-top: 12%;
   }
   .footer {
-    margin-top: -3vh;
+    margin-top: 15%;
   }
 }

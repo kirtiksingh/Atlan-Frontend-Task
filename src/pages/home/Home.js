@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <>
+    <div className="home-background">
       <div className='home-container'>
         <div className='home-heading-container'>
           <h1 className='home-heading'>SQLiter - Mastering Queries{<br />}</h1>
@@ -30,7 +30,7 @@ const Home = () => {
           </a>
         </p>
       </footer>
-    </>
+    </div>
   );
 };
 
