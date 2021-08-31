@@ -1,8 +1,7 @@
 import React, { Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-// import { Loader } from "./components/Loader";
-import { SemipolarLoading as Loader } from "react-loadingg";
+import Loader from "./components/loader/Loader";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
